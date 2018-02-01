@@ -14,7 +14,7 @@ open class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         Log.d("BaseActivity",this.javaClass.simpleName)
 
-        supportActionBar?.hide()
+
         ActivityCollector.addActivity(this)
     }
 

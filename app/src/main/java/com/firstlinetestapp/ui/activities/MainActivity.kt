@@ -11,20 +11,24 @@ import com.firstlinetestapp.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.longToast
 import org.jetbrains.anko.sdk25.coroutines.onClick
+import org.jetbrains.anko.startActivity
+
 
 class MainActivity : BaseActivity() {
 
-    private val TAG : String = "MainActivity"
+    private val TAG: String = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var tempData = savedInstanceState?.getString("data_key")
-        if (tempData != null) Log.d(TAG,tempData)
+        initView()
 
-        button1.onClick {
-//            val intent = Intent("com.firstline.ACTION_START")
+        var tempData = savedInstanceState?.getString("data_key")
+        if (tempData != null) Log.d(TAG, tempData)
+
+        to_second_btn.onClick {
+            //            val intent = Intent("com.firstline.ACTION_START")
 //            intent.addCategory("com.firstline.MY_CATEGORY")
 //            intent = Intent(Intent.ACTION_VIEW)
 //            intent.data = Uri.parse("http://www.baidu.com")
@@ -35,6 +39,22 @@ class MainActivity : BaseActivity() {
 
             SecondActivity.actionStart(this@MainActivity, "data1", "data2")
         }
+
+        to_recycle_view_btn.onClick {
+            startActivity<RecycleViewActivity>()
+        }
+
+        staggered_btn.onClick {
+            startActivity<StaggeredActivity>()
+        }
+
+        to_fragment.onClick {
+            startActivity<FragmentTestActivity>()
+        }
+    }
+
+    fun initView() {
+        supportActionBar?.hide()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -42,13 +62,12 @@ class MainActivity : BaseActivity() {
             1 -> if (resultCode == Activity.RESULT_OK) {
                 val returnedData = data?.getStringExtra("data_return")
                 Log.d(TAG, returnedData)
-
             }
         }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main,menu)
+        menuInflater.inflate(R.menu.main, menu)
         return super.onCreateOptionsMenu(menu)
     }
 

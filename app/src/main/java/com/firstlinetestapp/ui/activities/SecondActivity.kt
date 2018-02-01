@@ -18,7 +18,7 @@ class SecondActivity : BaseActivity(){
 //        Log.d("Second",data)
 
         button2.onClick {
-            startActivity<ThirdActivity>()
+            startActivity<ListViewActivity>()
         }
 
     }

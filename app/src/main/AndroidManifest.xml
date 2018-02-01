@@ -9,15 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activities.MainActivity"
-                  android:launchMode="singleTop">
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.SecondActivity"
+        <activity
+            android:name=".ui.activities.SecondActivity"
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="com.firstline.ACTION_START" />
@@ -26,13 +28,18 @@
                 <category android:name="com.firstline.MY_CATEGORY" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.ThirdActivity">
+        <activity android:name=".ui.activities.ListViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:scheme="http" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.activities.RecycleViewActivity" />
+        <activity android:name=".ui.activities.StaggeredActivity" />
+        <activity android:name=".ui.activities.FragmentTestActivity"></activity>
     </application>
 
 </manifest>

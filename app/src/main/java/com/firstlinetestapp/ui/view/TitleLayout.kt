@@ -19,7 +19,7 @@ class TitleLayout(context: Context, attrs: AttributeSet) : LinearLayout(context,
 
         title_back.onClick {
             val c = getContext() as Activity
-            c?.finish()
+            c.finish()
         }
 
         title_edit.onClick {

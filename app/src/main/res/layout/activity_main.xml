@@ -11,16 +11,57 @@
         layout="@layout/title" />
 
     <com.firstlinetestapp.ui.view.TitleLayout
+        android:id="@+id/titleLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/to_second_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="to second"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/titleLayout" />
+
+    <Button
+        android:id="@+id/to_recycle_view_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="32dp"
+        android:text="To RecycleView"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/titleLayout" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/staggered_btn"
+        android:layout_width="106dp"
+        android:layout_height="46dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Staggered"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/to_recycle_view_btn" />
+
+    <Button
+        android:id="@+id/to_fragment"
+        android:layout_width="106dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="24dp"
+        android:text="fragment"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/staggered_btn" />
+
 </android.support.constraint.ConstraintLayout>
