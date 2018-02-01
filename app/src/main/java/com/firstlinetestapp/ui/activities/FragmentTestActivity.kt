@@ -9,29 +9,30 @@ import com.firstlinetestapp.ui.fragments.AnotherRightFragment
 import com.firstlinetestapp.ui.fragments.RightFragment
 import kotlinx.android.synthetic.main.left_fragment.*
 
-class FragmentTestActivity : AppCompatActivity(),View.OnClickListener{
+class FragmentTestActivity : AppCompatActivity(){
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment_test)
 
-        left_fragment_btn.setOnClickListener(this)
-        replaceFragment(RightFragment())
+//        left_fragment_btn.setOnClickListener(this)
+//        replaceFragment(RightFragment())
 
     }
 
-    override fun onClick(v: View?) {
+    /*override fun onClick(v: View?) {
         when (v?.id) {
             R.id.left_fragment_btn -> replaceFragment(AnotherRightFragment())
         }
-    }
+    }*/
 
-    private fun replaceFragment(fragment: Fragment) {
+    /*private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val transaction = fragmentManager.beginTransaction()
         transaction.replace(R.id.right_layout, fragment)
+        transaction.addToBackStack(null)
         transaction.commit()
 
-    }
+    }*/
 }
