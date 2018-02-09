@@ -51,6 +51,12 @@ class MainActivity : BaseActivity() {
         to_fragment.onClick {
             startActivity<FragmentTestActivity>()
         }
+
+        fragment_practice.onClick {
+            startActivity<FragmentPracticeActivity>()
+        }
+
+
     }
 
     fun initView() {

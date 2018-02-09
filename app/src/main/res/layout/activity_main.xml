@@ -64,4 +64,15 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/staggered_btn" />
 
+    <Button
+        android:id="@+id/fragment_practice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="24dp"
+        android:text="FragmentBest\nParctice"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/to_second_btn" />
+
 </android.support.constraint.ConstraintLayout>

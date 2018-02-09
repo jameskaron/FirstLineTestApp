@@ -39,7 +39,8 @@
         </activity>
         <activity android:name=".ui.activities.RecycleViewActivity" />
         <activity android:name=".ui.activities.StaggeredActivity" />
-        <activity android:name=".ui.activities.FragmentTestActivity"></activity>
+        <activity android:name=".ui.activities.FragmentTestActivity" />
+        <activity android:name=".ui.activities.FragmentPracticeActivity"></activity>
     </application>
 
 </manifest>
