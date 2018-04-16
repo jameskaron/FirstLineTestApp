@@ -1,7 +1,9 @@
 package com.firstlinetestapp.newsFragmentPractise.ui.fragments
 
+import android.app.Activity
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.app.FragmentActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
@@ -13,6 +15,7 @@ import com.firstlinetestapp.R
 import com.firstlinetestapp.chapters.model.News
 import com.firstlinetestapp.newsFragmentPractise.ui.activities.NewContentActivity
 import kotlinx.android.synthetic.main.activity_news_content.*
+import kotlinx.android.synthetic.main.activity_news_fragment_main.*
 import kotlinx.android.synthetic.main.news_item.view.*
 import kotlinx.android.synthetic.main.news_title_frag.*
 import org.jetbrains.anko.sdk25.coroutines.onClick
@@ -26,6 +29,7 @@ class NewsTitleFragment : Fragment() {
         private const val TAG = "NewsTitleFragment"
         private var isTwoPane: Boolean = false
         var twoPaneFragment : NewsContentFragment? = null
+        lateinit var contextActivity: FragmentActivity
     }
 
     init {
@@ -38,8 +42,8 @@ class NewsTitleFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-//        isTwoPane = news_content_layout != null
         isTwoPane = activity.findViewById<FrameLayout>(R.id.news_content_layout) != null
+        println("isTwoPane is $isTwoPane")
         if (isTwoPane){
             twoPaneFragment = news_content_fragment as NewsContentFragment?
         }
@@ -47,6 +51,7 @@ class NewsTitleFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        contextActivity = activity
         news_title_recycler_view.layoutManager = LinearLayoutManager(activity)
         news_title_recycler_view.adapter = NewsAdapter(getNews())
     }
@@ -70,13 +75,12 @@ class NewsTitleFragment : Fragment() {
             view.onClick {
                 var news = newsList[holder.adapterPosition]
                 if (isTwoPane) {
-//                    val newsContentFragment: NewsContentFragment = fragmentManager.findFragmentById(R.id.news_content_fragment) as NewsContentFragment
                     println("isTwoPane true")
                     val newsContentFragment = twoPaneFragment
                     newsContentFragment?.refresh(news.title, news.content)
                 } else {
                     println("isTwoPane false")
-                    NewContentActivity().actionStart(news.title, news.content)
+                    NewContentActivity.actionStart(contextActivity, news.title, news.content)
                 }
             }
 
@@ -84,7 +88,6 @@ class NewsTitleFragment : Fragment() {
         }
 
         class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-            val newsView = view
 
             fun bindNews(news: News) {
                 with(news) {

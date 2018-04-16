@@ -1,4 +1,4 @@
-package com.firstlinetestapp.chapters.ui.activities
+package com.firstlinetestapp
 
 import android.app.Activity
 import android.content.Intent
@@ -7,8 +7,8 @@ import android.os.PersistableBundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import com.firstlinetestapp.R
-import com.firstlinetestapp.newsFragmentPractise.ui.activities.NewContentActivity
+import com.firstlinetestapp.chapters.ui.activities.*
+import com.firstlinetestapp.newsFragmentPractise.ui.activities.NewsFragmentMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.longToast
 import org.jetbrains.anko.sdk25.coroutines.onClick
@@ -54,7 +54,7 @@ class MainActivity : BaseActivity() {
         }
 
         fragment_practice.onClick {
-            startActivity<NewContentActivity>()
+            startActivity<NewsFragmentMainActivity>()
         }
 
 

@@ -6,9 +6,9 @@
     android:layout_height="match_parent">
 
     <fragment
-        android:id="@+id/news_title_fragment"
+        android:id="@+id/activity_news_content_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.firstlinetestapp.newsFragmentPractise.ui.fragments.NewsTitleFragment"
+        android:name="com.firstlinetestapp.newsFragmentPractise.ui.fragments.NewsContentFragment"
         />
 </LinearLayout>
