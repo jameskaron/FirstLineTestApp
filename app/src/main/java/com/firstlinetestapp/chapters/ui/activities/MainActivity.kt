@@ -1,4 +1,4 @@
-package com.firstlinetestapp.ui.activities
+package com.firstlinetestapp.chapters.ui.activities
 
 import android.app.Activity
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import com.firstlinetestapp.R
+import com.firstlinetestapp.newsFragmentPractise.ui.activities.NewContentActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.longToast
 import org.jetbrains.anko.sdk25.coroutines.onClick
@@ -53,7 +54,7 @@ class MainActivity : BaseActivity() {
         }
 
         fragment_practice.onClick {
-            startActivity<FragmentPracticeActivity>()
+            startActivity<NewContentActivity>()
         }
 
 

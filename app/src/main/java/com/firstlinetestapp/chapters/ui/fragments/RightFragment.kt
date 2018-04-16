@@ -1,4 +1,4 @@
-package com.firstlinetestapp.ui.fragments
+package com.firstlinetestapp.chapters.ui.fragments
 
 import android.content.Context
 import android.os.Bundle
@@ -8,8 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.firstlinetestapp.R
-import org.jetbrains.anko.AnkoLogger
-import org.jetbrains.anko.debug
 
 /**
  * Created by James on 01/02/2018.

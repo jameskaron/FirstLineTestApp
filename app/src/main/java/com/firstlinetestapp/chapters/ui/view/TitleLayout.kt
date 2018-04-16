@@ -1,4 +1,4 @@
-package com.firstlinetestapp.ui.view
+package com.firstlinetestapp.chapters.ui.view
 
 import android.app.Activity
 import android.content.Context

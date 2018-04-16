@@ -1,4 +1,4 @@
-package com.firstlinetestapp.ui.adapters
+package com.firstlinetestapp.chapters.ui.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import com.firstlinetestapp.model.Fruit
+import com.firstlinetestapp.chapters.model.Fruit
 import kotlinx.android.synthetic.main.fruit_item.view.*
 
 /**

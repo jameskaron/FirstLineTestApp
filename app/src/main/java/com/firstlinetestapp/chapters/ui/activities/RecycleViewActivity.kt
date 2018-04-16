@@ -1,12 +1,11 @@
-package com.firstlinetestapp.ui.activities
+package com.firstlinetestapp.chapters.ui.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.firstlinetestapp.R
-import com.firstlinetestapp.R.id.recycler_view
-import com.firstlinetestapp.model.Fruit
-import com.firstlinetestapp.ui.adapters.FruitRecyclerViewAdapter
+import com.firstlinetestapp.chapters.model.Fruit
+import com.firstlinetestapp.chapters.ui.adapters.FruitRecyclerViewAdapter
 import kotlinx.android.synthetic.main.activity_recycle_view.*
 
 class RecycleViewActivity : AppCompatActivity() {

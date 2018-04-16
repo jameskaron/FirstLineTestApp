@@ -1,4 +1,4 @@
-package com.firstlinetestapp.ui.fragments
+package com.firstlinetestapp.chapters.ui.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment

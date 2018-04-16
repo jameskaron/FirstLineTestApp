@@ -1,16 +1,18 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    ext.kotlin_version = '1.2.21'
+    ext.kotlin_version = '1.2.31'
     ext.anko_version = '0.10.4'
+    ext.gradle_version = '3.1.1'
+
     repositories {
         google()
-//        jcenter()
-        jcenter(){url 'http://jcenter.bintray.com/'}
+        jcenter()
+//        jcenter(){url 'http://jcenter.bintray.com/'}
 //        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.1.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
@@ -21,8 +23,8 @@ buildscript {
 allprojects {
     repositories {
         google()
-//        jcenter()
-        jcenter(){url 'http://jcenter.bintray.com/'}
+        jcenter()
+//        jcenter(){url 'http://jcenter.bintray.com/'}
 //        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/central/'}
     }
 }

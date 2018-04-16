@@ -1,13 +1,13 @@
-package com.firstlinetestapp.ui.activities
+package com.firstlinetestapp.chapters.ui.activities
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.firstlinetestapp.R
-import com.firstlinetestapp.ui.fragments.AnotherRightFragment
-import com.firstlinetestapp.ui.fragments.RightFragment
-import kotlinx.android.synthetic.main.left_fragment.*
+import com.firstlinetestapp.R.id.left_fragment_btn
+import com.firstlinetestapp.chapters.ui.fragments.AnotherRightFragment
+import com.firstlinetestapp.chapters.ui.fragments.RightFragment
 
 class FragmentTestActivity : AppCompatActivity(){
 
@@ -27,7 +27,7 @@ class FragmentTestActivity : AppCompatActivity(){
         }
     }*/
 
-    /*private fun replaceFragment(fragment: Fragment) {
+   /* private fun replaceFragment(fragment: Fragment) {
         val fragmentManager = supportFragmentManager
         val transaction = fragmentManager.beginTransaction()
         transaction.replace(R.id.right_layout, fragment)

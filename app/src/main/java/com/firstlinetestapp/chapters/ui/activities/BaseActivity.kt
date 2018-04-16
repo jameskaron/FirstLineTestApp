@@ -1,4 +1,4 @@
-package com.firstlinetestapp.ui.activities
+package com.firstlinetestapp.chapters.ui.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity

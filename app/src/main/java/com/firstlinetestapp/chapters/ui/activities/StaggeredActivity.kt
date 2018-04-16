@@ -1,11 +1,11 @@
-package com.firstlinetestapp.ui.activities
+package com.firstlinetestapp.chapters.ui.activities
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.StaggeredGridLayoutManager
 import com.firstlinetestapp.R
-import com.firstlinetestapp.model.Fruit
-import com.firstlinetestapp.ui.adapters.RecyclerViewAdapter
+import com.firstlinetestapp.chapters.model.Fruit
+import com.firstlinetestapp.chapters.ui.adapters.RecyclerViewAdapter
 import kotlinx.android.synthetic.main.activity_staggered.*
 import org.jetbrains.anko.toast
 import java.util.*

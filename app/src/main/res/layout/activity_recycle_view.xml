@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.firstlinetestapp.ui.activities.RecycleViewActivity">
+    tools:context=".chapters.ui.activities.RecycleViewActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"

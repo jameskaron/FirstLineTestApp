@@ -9,7 +9,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:name="com.firstlinetestapp.ui.fragments.LeftFragment"
+        android:name="com.firstlinetestapp.chapters.ui.fragments.LeftFragment"
         />
 
     <fragment
@@ -17,7 +17,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3"
-        android:name="com.firstlinetestapp.ui.fragments.RightFragment"
+        android:name="com.firstlinetestapp.chapters.ui.fragments.RightFragment"
         />
 
 </LinearLayout>

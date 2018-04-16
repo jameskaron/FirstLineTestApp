@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.firstlinetestapp.ui.activities.MainActivity">
+    tools:context=".chapters.ui.activities.MainActivity">
 
     <include
         android:id="@+id/toolbar"
         layout="@layout/title" />
 
-    <com.firstlinetestapp.ui.view.TitleLayout
+    <com.firstlinetestapp.chapters.ui.view.TitleLayout
         android:id="@+id/titleLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

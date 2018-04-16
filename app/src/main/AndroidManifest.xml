@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.activities.MainActivity"
+            android:name="com.firstlinetestapp.chapters.ui.activities.MainActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.SecondActivity"
+            android:name="com.firstlinetestapp.chapters.ui.activities.SecondActivity"
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="com.firstline.ACTION_START" />
@@ -28,7 +28,7 @@
                 <category android:name="com.firstline.MY_CATEGORY" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.ListViewActivity">
+        <activity android:name="com.firstlinetestapp.chapters.ui.activities.ListViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -37,10 +37,10 @@
                 <data android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activities.RecycleViewActivity" />
-        <activity android:name=".ui.activities.StaggeredActivity" />
-        <activity android:name=".ui.activities.FragmentTestActivity" />
-        <activity android:name=".ui.activities.FragmentPracticeActivity"></activity>
+        <activity android:name="com.firstlinetestapp.chapters.ui.activities.RecycleViewActivity" />
+        <activity android:name="com.firstlinetestapp.chapters.ui.activities.StaggeredActivity" />
+        <activity android:name="com.firstlinetestapp.chapters.ui.activities.FragmentTestActivity" />
+        <activity android:name=".newsFragmentPractise.ui.activities.NewContentActivity"></activity>
     </application>
 
 </manifest>

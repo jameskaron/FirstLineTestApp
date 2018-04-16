@@ -1,12 +1,11 @@
-package com.firstlinetestapp.ui.activities
+package com.firstlinetestapp.chapters.ui.activities
 
 import android.os.Bundle
 import com.firstlinetestapp.R
 import com.firstlinetestapp.Util.ActivityCollector
-import com.firstlinetestapp.model.Fruit
-import com.firstlinetestapp.ui.adapters.FruitAdapter
+import com.firstlinetestapp.chapters.model.Fruit
+import com.firstlinetestapp.chapters.ui.adapters.FruitAdapter
 import kotlinx.android.synthetic.main.activity_third.*
-import org.jetbrains.anko.sdk25.coroutines.onClick
 import org.jetbrains.anko.sdk25.coroutines.onItemClick
 import org.jetbrains.anko.toast
 
