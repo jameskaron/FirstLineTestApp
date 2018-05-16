@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.firstlinetestapp">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -40,8 +43,27 @@
         <activity android:name=".chapters.ui.activities.RecycleViewActivity" />
         <activity android:name=".chapters.ui.activities.StaggeredActivity" />
         <activity android:name=".chapters.ui.activities.FragmentTestActivity" />
-        <activity android:name=".newsFragmentPractise.ui.activities.NewContentActivity" />
-        <activity android:name=".newsFragmentPractise.ui.activities.NewsFragmentMainActivity"></activity>
+        <activity android:name="com.Practices.newsFragmentPractise.ui.activities.NewContentActivity" />
+        <activity android:name="com.Practices.newsFragmentPractise.ui.activities.NewsFragmentMainActivity" />
+
+        <receiver
+            android:name=".chapters.broadcast.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".chapters.broadcast.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".PracticesGuideActivity"></activity>
     </application>
 
 </manifest>

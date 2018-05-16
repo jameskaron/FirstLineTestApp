@@ -1,29 +1,43 @@
 package com.firstlinetestapp
 
 import android.app.Activity
-import android.content.Intent
+import android.content.*
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.support.v4.content.LocalBroadcastManager
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import com.firstlinetestapp.R.id.fragment_practice
+import com.firstlinetestapp.chapters.broadcast.MyBroadcastReceiver
 import com.firstlinetestapp.chapters.ui.activities.*
-import com.firstlinetestapp.newsFragmentPractise.ui.activities.NewsFragmentMainActivity
+import com.Practices.newsFragmentPractise.ui.activities.NewsFragmentMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.longToast
 import org.jetbrains.anko.sdk25.coroutines.onClick
 import org.jetbrains.anko.startActivity
+import org.jetbrains.anko.toast
 
 
 class MainActivity : BaseActivity() {
 
     private val TAG: String = "MainActivity"
 
+    private lateinit var networkChangeReceiver: NetworkChangeReceiver
+    private lateinit var networkIntentFilter: IntentFilter
+
+    lateinit var localReceiver: LocalReceiver
+    lateinit var localBroadcastIntentFilter: IntentFilter
+    lateinit var localBroadcastManager: LocalBroadcastManager
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         initView()
+        initData()
 
         var tempData = savedInstanceState?.getString("data_key")
         if (tempData != null) Log.d(TAG, tempData)
@@ -53,15 +67,41 @@ class MainActivity : BaseActivity() {
             startActivity<FragmentTestActivity>()
         }
 
-        fragment_practice.onClick {
-            startActivity<NewsFragmentMainActivity>()
+        btn_broadcast.onClick {
+            sendOrderedBroadcast(Intent(this@MainActivity, MyBroadcastReceiver::class.java)
+                    .setAction("MY_BROADCAST"), null)
+
+            /*val it = Intent()
+            it.action = "MY_BROADCAST"
+//            it.component = ComponentName("com.m.broadcast","com.m.broadcast.AnotherBroadCastReceiver")
+            it.component = ComponentName("com.firstlinetestapp.chapters.broadcast"
+                    ,"com.firstlinetestapp.chapters.broadcast.MyBroadcastReceiver")
+            sendBroadcast(it)*/
         }
 
-
+        btn_local_broadcast.onClick {
+            localBroadcastManager.sendBroadcast(Intent("LOCAL_BROADCAST"))
+        }
     }
 
-    fun initView() {
+    private fun initView() {
         supportActionBar?.hide()
+    }
+
+    private fun initData() {
+        networkIntentFilter = IntentFilter()
+        networkIntentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE")
+        networkChangeReceiver = NetworkChangeReceiver()
+        registerReceiver(networkChangeReceiver, networkIntentFilter)
+
+        localBroadcastIntentFilter = IntentFilter()
+        localBroadcastIntentFilter.addAction("LOCAL_BROADCAST")
+        localBroadcastManager = LocalBroadcastManager.getInstance(this)
+        localReceiver = LocalReceiver()
+        localBroadcastManager.registerReceiver(localReceiver, localBroadcastIntentFilter)
+
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -93,4 +133,34 @@ class MainActivity : BaseActivity() {
         outState?.putString("data_key", "onSaveInstanceState data")
 
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(networkChangeReceiver)
+
+        localBroadcastManager.unregisterReceiver(localReceiver)
+    }
+
+    class NetworkChangeReceiver : BroadcastReceiver() {
+        override fun onReceive(context: Context?, intent: Intent?) {
+            val connectionManager = context?.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+            val networkInfo = connectionManager.activeNetworkInfo
+            if (networkInfo != null && networkInfo.isAvailable) {
+                context.longToast("network is available")
+            }else{
+                Toast.makeText(context, "network is unavailable", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+    }
+
+    class LocalReceiver : BroadcastReceiver(){
+        override fun onReceive(context: Context?, intent: Intent?) {
+            context?.toast("received local broadcast")
+
+        }
+
+    }
+
+
 }

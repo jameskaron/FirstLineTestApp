@@ -1,4 +1,4 @@
-package com.firstlinetestapp.newsFragmentPractise.ui.fragments
+package com.Practices.newsFragmentPractise.ui.fragments
 
 import android.app.Activity
 import android.os.Bundle
@@ -13,11 +13,13 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import com.firstlinetestapp.R
 import com.firstlinetestapp.chapters.model.News
-import com.firstlinetestapp.newsFragmentPractise.ui.activities.NewContentActivity
+import com.Practices.newsFragmentPractise.event.NewsEvent
+import com.Practices.newsFragmentPractise.ui.activities.NewContentActivity
 import kotlinx.android.synthetic.main.activity_news_content.*
 import kotlinx.android.synthetic.main.activity_news_fragment_main.*
 import kotlinx.android.synthetic.main.news_item.view.*
 import kotlinx.android.synthetic.main.news_title_frag.*
+import org.greenrobot.eventbus.EventBus
 import org.jetbrains.anko.sdk25.coroutines.onClick
 
 /**
@@ -67,7 +69,7 @@ class NewsTitleFragment : Fragment() {
             holder?.bindNews(newsList[position])
         }
 
-        override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): NewsAdapter.ViewHolder {
+        override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
             Log.d(TAG, "Into NewsAdapter onCreateViewHolder")
 
             val view = LayoutInflater.from(parent?.context).inflate(R.layout.news_item, parent, false)
@@ -76,8 +78,11 @@ class NewsTitleFragment : Fragment() {
                 var news = newsList[holder.adapterPosition]
                 if (isTwoPane) {
                     println("isTwoPane true")
-                    val newsContentFragment = twoPaneFragment
-                    newsContentFragment?.refresh(news.title, news.content)
+                    //Tradition use
+//                    val newsContentFragment = twoPaneFragment
+//                    newsContentFragment?.refresh(news.title, news.content)
+                    //Use EventBus
+                    EventBus.getDefault().post(NewsEvent(news))
                 } else {
                     println("isTwoPane false")
                     NewContentActivity.actionStart(contextActivity, news.title, news.content)

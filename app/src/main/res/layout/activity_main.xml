@@ -65,14 +65,36 @@
         app:layout_constraintTop_toBottomOf="@+id/staggered_btn" />
 
     <Button
-        android:id="@+id/fragment_practice"
+        android:id="@+id/btn_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"
+        android:text="Send Broadcast"
+        android:textSize="10dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/to_second_btn" />
+
+    <Button
+        android:id="@+id/btn_local_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="24dp"
+        android:text="local broadcast"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/to_fragment" />
+
+    <Button
+        android:id="@+id/btn_practices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginTop="24dp"
-        android:text="FragmentBest\nParctice"
-        android:textSize="10sp"
+        android:text="Practices"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toBottomOf="@+id/to_second_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_broadcast" />
+
 
 </android.support.constraint.ConstraintLayout>

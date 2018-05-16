@@ -1,4 +1,4 @@
-package com.firstlinetestapp.newsFragmentPractise.ui.activities
+package com.Practices.newsFragmentPractise.ui.activities
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,7 @@ import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import com.firstlinetestapp.R
-import com.firstlinetestapp.newsFragmentPractise.ui.fragments.NewsContentFragment
+import com.Practices.newsFragmentPractise.ui.fragments.NewsContentFragment
 import kotlinx.android.synthetic.main.activity_news_content.*
 
 class NewContentActivity : AppCompatActivity() {
