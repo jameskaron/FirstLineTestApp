@@ -1,4 +1,4 @@
-package com.Practices.newsFragmentPractise.event
+package com.practices.newsFragmentPractise.event
 
 import com.firstlinetestapp.chapters.model.News
 

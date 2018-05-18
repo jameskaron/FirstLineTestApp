@@ -1,7 +1,10 @@
 package com.firstlinetestapp
 
 import android.app.Activity
-import android.content.*
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.Intent
+import android.content.IntentFilter
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.os.PersistableBundle
@@ -10,10 +13,8 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import com.firstlinetestapp.R.id.fragment_practice
 import com.firstlinetestapp.chapters.broadcast.MyBroadcastReceiver
 import com.firstlinetestapp.chapters.ui.activities.*
-import com.Practices.newsFragmentPractise.ui.activities.NewsFragmentMainActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.longToast
 import org.jetbrains.anko.sdk25.coroutines.onClick
@@ -82,6 +83,15 @@ class MainActivity : BaseActivity() {
         btn_local_broadcast.onClick {
             localBroadcastManager.sendBroadcast(Intent("LOCAL_BROADCAST"))
         }
+
+        btn_practices.onClick {
+            startActivity<PracticesGuideActivity>()
+        }
+
+        btn_file_persistence.onClick {
+            startActivity<FilePersistenceMainActivity>()
+        }
+
     }
 
     private fun initView() {

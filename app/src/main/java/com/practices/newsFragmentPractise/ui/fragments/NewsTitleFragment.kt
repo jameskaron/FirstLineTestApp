@@ -1,6 +1,5 @@
-package com.Practices.newsFragmentPractise.ui.fragments
+package com.practices.newsFragmentPractise.ui.fragments
 
-import android.app.Activity
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
@@ -13,9 +12,8 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import com.firstlinetestapp.R
 import com.firstlinetestapp.chapters.model.News
-import com.Practices.newsFragmentPractise.event.NewsEvent
-import com.Practices.newsFragmentPractise.ui.activities.NewContentActivity
-import kotlinx.android.synthetic.main.activity_news_content.*
+import com.practices.newsFragmentPractise.event.NewsEvent
+import com.practices.newsFragmentPractise.ui.activities.NewContentActivity
 import kotlinx.android.synthetic.main.activity_news_fragment_main.*
 import kotlinx.android.synthetic.main.news_item.view.*
 import kotlinx.android.synthetic.main.news_title_frag.*

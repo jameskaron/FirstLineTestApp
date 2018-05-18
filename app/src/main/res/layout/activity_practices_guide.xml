@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="32dp"
-        android:text="Force_Offline"
+        android:text="NewsFragment"
         android:textSize="10dp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="48dp"
         android:layout_marginTop="32dp"
-        android:text="NewsFragment"
+        android:text="Force_Offline"
         android:textSize="10dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />

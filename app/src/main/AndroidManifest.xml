@@ -43,8 +43,8 @@
         <activity android:name=".chapters.ui.activities.RecycleViewActivity" />
         <activity android:name=".chapters.ui.activities.StaggeredActivity" />
         <activity android:name=".chapters.ui.activities.FragmentTestActivity" />
-        <activity android:name="com.Practices.newsFragmentPractise.ui.activities.NewContentActivity" />
-        <activity android:name="com.Practices.newsFragmentPractise.ui.activities.NewsFragmentMainActivity" />
+        <activity android:name="com.practices.newsFragmentPractise.ui.activities.NewContentActivity" />
+        <activity android:name="com.practices.newsFragmentPractise.ui.activities.NewsFragmentMainActivity" />
 
         <receiver
             android:name=".chapters.broadcast.BootCompleteReceiver"
@@ -63,7 +63,10 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".PracticesGuideActivity"></activity>
+        <activity android:name=".PracticesGuideActivity" />
+        <activity android:name="com.practices.forceOfflinePractice.ui.activities.LoginActivity" />
+        <activity android:name="com.practices.forceOfflinePractice.ui.activities.ForceOfflineMainActivity" />
+        <activity android:name=".chapters.ui.activities.FilePersistenceMainActivity"></activity>
     </application>
 
 </manifest>

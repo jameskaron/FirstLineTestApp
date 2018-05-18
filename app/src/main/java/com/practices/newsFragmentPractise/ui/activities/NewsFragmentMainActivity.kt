@@ -1,4 +1,4 @@
-package com.Practices.newsFragmentPractise.ui.activities
+package com.practices.newsFragmentPractise.ui.activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

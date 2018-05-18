@@ -1,4 +1,4 @@
-package com.Practices.newsFragmentPractise.ui.fragments
+package com.practices.newsFragmentPractise.ui.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import com.firstlinetestapp.R
-import com.Practices.newsFragmentPractise.event.NewsEvent
+import com.practices.newsFragmentPractise.event.NewsEvent
 import kotlinx.android.synthetic.main.news_content_frag.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe

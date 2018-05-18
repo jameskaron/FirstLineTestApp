@@ -9,6 +9,6 @@
         android:id="@+id/activity_news_content_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.Practices.newsFragmentPractise.ui.fragments.NewsContentFragment"
+        android:name="com.practices.newsFragmentPractise.ui.fragments.NewsContentFragment"
         />
 </LinearLayout>
